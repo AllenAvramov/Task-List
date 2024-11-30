@@ -1,4 +1,4 @@
-//-- Global Tasks storage array
+
 let tasks = [];
 
 //--Priority order Values for sorting
