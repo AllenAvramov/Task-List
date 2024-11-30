@@ -1,4 +1,4 @@
-
+//-- Global Tasks storage array
 let tasks = [];
 
 //--Priority order Values for sorting
@@ -9,7 +9,7 @@ const priorityOrder = {
 };
 
 
-
+// Function to add new task
 function addTask() {
     const taskNameInput = document.getElementById('taskNameInput');
     const prioritySelect = document.getElementById('prioritySelect');
