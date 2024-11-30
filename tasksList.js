@@ -81,6 +81,11 @@ function displayTasks(tasksToRender = tasks) {
         if (task.priority === 'Normal') priorityClass = 'priority-normal';
         if (task.priority === 'High') priorityClass = 'priority-high';
 
+        let statusClass = '';
+        if (task.status === 'Pending') statusClass = 'status-pending';
+        if (task.status === 'In Work') statusClass = 'status-in-work';
+        if (task.status === 'Finished') statusClass = 'status-finished';
+
 
         const row = `
             <tr class="${priorityClass}">
@@ -92,7 +97,7 @@ function displayTasks(tasksToRender = tasks) {
                     </span>
                 </td>
                 <td>
-                    <span class="badge bg-secondary dropdown-toggle" 
+                    <span class="badge ${statusClass} dropdown-toggle" 
                           data-bs-toggle="dropdown" 
                           aria-expanded="false">
                         ${task.status}
