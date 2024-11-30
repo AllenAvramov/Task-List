@@ -122,14 +122,13 @@ function displayTasks(tasksToRender = tasks) {
 
 function changeStatus(taskId, newStatus) {
     tasks = tasks.map(task => {
-        if (task.id === taskId) {
-            return { ...task, status: newStatus };
-        }
+        if (task.id === taskId)
+            return {...task, status: newStatus}
         return task;
-    });
-
+    })
     displayTasks();
 }
+
 
 // Function to delete task
 function deleteTask(taskId) {
